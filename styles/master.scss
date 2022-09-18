@@ -4,6 +4,8 @@ $gray: #8C8C8C;
 $white: #E6E6E6;
 $gold: #BFB439;
 
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +13,7 @@ $gold: #BFB439;
 
 body {
     background-color: $black;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
 @import "bootstrap-icons/font/bootstrap-icons.scss";

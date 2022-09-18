@@ -7,15 +7,25 @@
 
     border-radius: 50%;
     background-color: $gold;
-    &:hover {
-        cursor: pointer;
-        background-color: $white;
-    }
 
-    i {
+    .toggleDiv {
+        position: absolute;
         transition: 0.3s all ease;
-        transform: translate(90px, 90px);
+        width: 150px;
+        height: 150px;
         font-size: 2em;
+        background-color: $gold;
+        border-radius: 50%;
+        
+        i {
+            position: absolute;
+            transform: translate(90px, 85px);
+        }
+        
+        &:hover {
+            cursor: pointer;
+            background-color: $white;
+        }
     }
 
     .link-wrapper {
@@ -40,11 +50,11 @@
     }
 
     .show-links {
-        transform: translate(100px, 100px) rotate(0deg);
+        transform: translate(100px, 150px) rotate(0deg);
     }
 
     .hide-links {
-        transform: translate(-100px, 100px) rotate(90deg);
+        transform: translate(-100px, 150px) rotate(90deg);
     }
 }
 
