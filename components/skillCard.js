@@ -1,12 +1,18 @@
 import React from "react";
+import Image from 'next/image';
 
 export default function SkillCard(props) {
     
-    const { cardTitle, cardCaption } = props;
+    const { imageSrc, cardTitle, cardCaption } = props;
     
     return (
         <div className='project-preview'>
-            <img src=''
+            <Image
+                src={imageSrc}
+                className='card-img'
+                width='150px'
+                height='150px'
+            />
             <h2>{cardTitle}</h2>
             <p>{cardCaption}</p>
         </div>

@@ -9,7 +9,12 @@
     }
 
     .content {
-
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 300px);
+        grid-template-rows: repeat(auto-fit, 300px);
+        justify-content: center;
+        gap: 10%;
     }
 
     footer {

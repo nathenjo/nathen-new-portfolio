@@ -1,7 +1,75 @@
+.nav-component {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform: translate(-80px, -80px);
+    transition: 0.5s all ease;
+
+    border-radius: 50%;
+    background-color: $gold;
+    &:hover {
+        cursor: pointer;
+    }
+
+    i {
+        transition: 0.3s all ease;
+        transform: translate(90px, 90px);
+        font-size: 2em;
+    }
+
+    .link-wrapper {
+        transition: 0.5s all ease;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        gap: 20px;
+
+        background-color: $black;
+        padding: 10px;
+        border-radius: 10px;
+        a {
+            color: white;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s all ease;
+            &:hover {
+                color: $gray;
+                border-bottom: 1px solid $gray;
+            }
+        }
+    }
+
+    .show-links {
+        transform: translate(100px, 100px) rotate(0deg);
+    }
+
+    .hide-links {
+        transform: translate(-100px, 100px) rotate(90deg);
+    }
+}
+
 .project-preview {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 150px;
-    justify-content: center;
+    grid-template-rows: 150px auto auto;
     align-items: center;
+
+    background-color: $gray;
+    color: $white;
+    box-shadow: inset 0px -15px 30px -20px $black;
+    border-radius: 20px;
+    padding: 10px;
+    span {
+        grid-row: 1/2;
+        place-self: center;
+    }
+    h2 {
+        grid-row: 2/3;
+        text-align: center;
+    }
+    p {
+        grid-row: 3/4;
+        background-color: $black;
+        padding: 0px 10px;
+        border-radius: 10px;
+    }
 }
