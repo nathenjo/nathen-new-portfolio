@@ -9,6 +9,7 @@
     background-color: $gold;
     &:hover {
         cursor: pointer;
+        background-color: $white;
     }
 
     i {
@@ -24,16 +25,16 @@
         align-content: space-between;
         gap: 20px;
 
-        background-color: $black;
+        background-color: $white;
         padding: 10px;
         border-radius: 10px;
         a {
-            color: white;
-            border-bottom: 1px solid transparent;
+            color: $black;
             transition: 0.3s all ease;
             &:hover {
                 color: $gray;
-                border-bottom: 1px solid $gray;
+                transform: translateX(5px);
+                text-decoration: underline;
             }
         }
     }
@@ -53,8 +54,8 @@
     grid-template-rows: 150px auto auto;
     align-items: center;
 
-    background-color: $gray;
-    color: $white;
+    background-color: $white;
+    color: $black;
     box-shadow: inset 0px -15px 30px -20px $black;
     border-radius: 20px;
     padding: 10px;
@@ -68,8 +69,5 @@
     }
     p {
         grid-row: 3/4;
-        background-color: $black;
-        padding: 0px 10px;
-        border-radius: 10px;
     }
 }

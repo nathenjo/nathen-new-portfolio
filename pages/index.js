@@ -13,6 +13,7 @@ export default function Index() {
         <div className='index'>
             <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} />
 
+            <h2 className='skills-heading'>Skills</h2>
             <section className='content'>
                 <SkillCard
                     imageSrc='/python-logo.png'

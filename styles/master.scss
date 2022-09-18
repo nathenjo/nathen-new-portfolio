@@ -10,10 +10,10 @@ $gold: #BFB439;
 }
 
 body {
-    background-color: $white;
+    background-color: $black;
 }
 
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "bootstrap-icons/font/bootstrap-icons.scss";
 
 @import './index.scss';
 @import './components.scss';
