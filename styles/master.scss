@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
 $green: #0C4C2A;
+$light-green: #12733F;
 $black: #262626;
 $gray: #8C8C8C;
 $white: #E6E6E6;
-$gold: #BFB439;
+$blue: #00A4B3;
 
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+$title-text: 'Gulzar', serif;
+
+@import './mixins.scss';
 
 * {
     padding: 0;

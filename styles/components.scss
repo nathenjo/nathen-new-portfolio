@@ -1,30 +1,31 @@
+// Nav Component
 .nav-component {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    transform: translate(-80px, -80px);
+    // transform: translate(-80px, -80px);
     transition: 0.5s all ease;
-
-    border-radius: 50%;
-    background-color: $gold;
 
     .toggleDiv {
         position: absolute;
         transition: 0.3s all ease;
-        width: 150px;
-        height: 150px;
-        font-size: 2em;
-        background-color: $gold;
-        border-radius: 50%;
-        
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+        background-color: $blue;
+        border-radius: 0 0 50% 0;
+        display: grid;
+        align-content: end;
+        justify-content: center;
+
         i {
-            position: absolute;
-            transform: translate(90px, 85px);
+            padding-bottom: 10px;
         }
         
         &:hover {
             cursor: pointer;
-            background-color: $white;
+            background-color: $light-green;
+            i {
+                color: $white;
+            }
         }
     }
 
@@ -34,15 +35,16 @@
         flex-direction: column;
         align-content: space-between;
         gap: 20px;
+        width: 100px;
 
-        background-color: $white;
+        background-color: $blue;
         padding: 10px;
         border-radius: 10px;
         a {
-            color: $black;
+            color: $white;
+            font-size: 1.3em;
             transition: 0.3s all ease;
             &:hover {
-                color: $gray;
                 transform: translateX(5px);
                 text-decoration: underline;
             }
@@ -54,21 +56,20 @@
     }
 
     .hide-links {
-        transform: translate(-100px, 150px) rotate(90deg);
+        transform: translate(-200px, 150px) rotate(90deg);
     }
 }
 
+
+// Skill Card Component
 .project-preview {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 150px auto auto;
     align-items: center;
 
-    background-color: $white;
     color: $black;
-    box-shadow: inset 0px -15px 30px -20px $black;
-    border-radius: 20px;
-    padding: 10px;
+    @include card-style();
     span {
         grid-row: 1/2;
         place-self: center;
@@ -79,5 +80,43 @@
     }
     p {
         grid-row: 3/4;
+    }
+}
+
+// Profile Card Component
+.profile-card {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 180px;
+    grid-gap: 0 20px;
+    gap: 0 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 20px;
+    width: 80%;
+    padding: 0px 10px;
+    place-self: center;
+    font-size: 1.3em;
+    .pic {
+        span {
+            align-self: center;
+        }
+        img {
+            border-radius: 50%;
+            align-self: center;
+        }
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .subheading {
+            display: flex;
+            gap: 10px;
+            color: $blue;
+        }
     }
 }

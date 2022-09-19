@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 import NavComponent from "../components/nav";
+import Placeholder from "../components/placeholder";
+import ProfileCard from "../components/profileCard";
 import SkillCard from "../components/skillCard";
+import Title from "../components/title";
 
 export default function Index() {
 
@@ -13,7 +16,12 @@ export default function Index() {
         <div className='index'>
             <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} />
 
-            <h2 className='skills-heading'>Skills</h2>
+            <section className='profile-info'>
+                <Placeholder propClass='pi-placeholder' />
+                <Title title='Portfolio' propClass='skills-heading' />
+                <ProfileCard propClass='index-pc' />
+            </section>
+            <Title title='Skills' propClass='skills-heading' />
             <section className='content'>
                 <SkillCard
                     imageSrc='/python-logo.png'
