@@ -13,6 +13,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 180px;
+        align-items: center;
 
         .skills-heading {
             color: $white;
@@ -21,7 +22,6 @@
     }
 
     .skills-heading {
-        padding-top: 50px;
         text-align: center;
         color: $blue;
         font-size: 3em;
@@ -31,7 +31,6 @@
     }
 
     .content {
-        padding-top: 50px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 300px);
         grid-template-rows: repeat(auto-fit, 300px);
@@ -39,7 +38,17 @@
         gap: 10%;
     }
 
-    footer {
+}
 
+@media only screen and (max-width: 850px) {
+    .index {
+        .profile-info {
+            grid-template-columns: 0.5fr;
+            grid-template-rows: repeat(auto-fit, 150px);
+            justify-content: center;
+        }
+        .content {
+            gap: 2%;
+        }
     }
 }

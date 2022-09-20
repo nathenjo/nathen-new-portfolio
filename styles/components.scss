@@ -52,11 +52,11 @@
     }
 
     .show-links {
-        transform: translate(100px, 150px) rotate(0deg);
+        transform: translate(100px, 100px) rotate(0deg);
     }
 
     .hide-links {
-        transform: translate(-200px, 150px) rotate(90deg);
+        transform: translate(-200px, 100px) rotate(90deg);
     }
 }
 
@@ -116,7 +116,18 @@
         .subheading {
             display: flex;
             gap: 10px;
-            color: $blue;
+            i {
+                color: $blue;
+            }
         }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        align-items: center;
+        justify-items: center;
     }
 }
