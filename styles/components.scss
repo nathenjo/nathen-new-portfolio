@@ -1,8 +1,8 @@
 // Nav Component
 .nav-component {
     position: absolute;
-    // transform: translate(-80px, -80px);
     transition: 0.5s all ease;
+    z-index: 999;
 
     .toggleDiv {
         position: absolute;
@@ -123,6 +123,7 @@
     }
 }
 
+// Media query
 @media only screen and (max-width: 1100px) {
     .profile-card {
         grid-template-columns: 1fr;

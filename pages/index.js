@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Footer from "../components/footer";
 
 import NavComponent from "../components/nav";
 import Placeholder from "../components/placeholder";
@@ -9,6 +10,17 @@ import Title from "../components/title";
 export default function Index() {
 
     const navLinks = ['Home', 'About', 'Projects', 'Contact'];
+    const [windowWidth, setWindowWidth] = useState();
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener('resize', function() {
+            setWindowWidth(window.innerWidth);
+        })
+    }, [windowWidth])
 
     const [pageLoc, setPageLoc] = useState('home');
 
@@ -17,7 +29,7 @@ export default function Index() {
             <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} />
 
             <section className='profile-info'>
-                <Placeholder propClass='pi-placeholder' />
+                {windowWidth > 850 && <Placeholder propClass='pi-placeholder' />}
                 <Title title='Portfolio' propClass='skills-heading' />
                 <ProfileCard propClass='index-pc' />
             </section>
@@ -54,21 +66,13 @@ export default function Index() {
                     cardCaption='Professionally certified in MongoDB through Bottega University, Full Stack Certificate and regulary use and improve through personal projects'
                 />
             </section>
-
-            <footer>
-                <section className='socials'>
-
-                </section>
-
-                <section className='sitemap'>
-
-                </section>
-
-                <section className='mini-bio'>
-
-                </section>
-            </footer>
+            <section className='footer-section'>
+                <Footer
+                    propClass='index-footer'
+                    links={navLinks}
+                    setPageLoc={setPageLoc}
+                />
+            </section>
         </div>
-
     )
 }
