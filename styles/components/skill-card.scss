@@ -9,13 +9,14 @@
     display: grid;
     grid-template-columns: 1/-1;
     grid-template-rows: 1/-1;
-    transition: 0.6s all ease;
+    transition: 0.3s all ease;
     perspective: 150rem;
     -moz-perspective: 150rem;
     color: $black;
+
     .card-front, .card-back {
         backface-visibility: hidden;
-        transition: 0.6s all ease;
+        transition: 0.5s all ease;
     }
     & > * {
         grid-row: 1/-1;
@@ -42,13 +43,16 @@
     .card-back {
         height: 300px;
         width: 300px;
-        transform: rotateY(-180deg);
         display: flex;
         flex-direction: column;
         align-items: center;
         @include card-style();
         background-color: $blue;
         color: $white;
+    }
+    &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
     }
 }
 
