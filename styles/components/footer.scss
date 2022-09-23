@@ -1,0 +1,61 @@
+.footer-component {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: start;
+
+    font-size: 1.5em;
+    background-color: $red;
+    color: $white;
+    padding: 20px;
+
+    .socials {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: flex-start;
+        a {
+            text-decoration: none;
+            color: $white
+        }
+    }
+
+    .sitemap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        a {
+            @include link-style();
+        }
+    }
+
+    .mini-bio {
+        .image-header {
+            display: flex;
+            place-self: start;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+            h3 {
+                place-self: center;
+            }
+        }
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer-component {
+        grid-template-columns: 1fr;
+
+        .socials {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

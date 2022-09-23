@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import SocialLink from './socialLink';
 
@@ -9,9 +10,12 @@ export default function Footer(props) {
         <footer className={`footer-component ${propClass}`}>
             <section className='socials'>
                 <SocialLink
-                    propClass='linkedin'
                     icon='bi-linkedin'
                     link='https://www.linkedin.com/in/nathen-johnson-67155920b/'
+                />
+                <SocialLink
+                    icon='bi-github'
+                    link='https://github.com/nathenjo'
                 />
             </section>
 
@@ -22,9 +26,17 @@ export default function Footer(props) {
             </section>
 
             <section className='mini-bio'>
-                <h3>Portfolio for Nathen Johnson</h3>
+                <div class='image-header'>
+                    <Image
+                        src='/nate-headshot.jpg'
+                        width='100'
+                        height='100'
+                    />
+                    <h3>Portfolio for Nathen Johnson</h3>
+                </div>
                 <p>Professionally certified Full Stack Developer through Bottega University. Currently working for Florence One School District as a Full Stack Developer, formally called an Applications Developer.</p>
                 <p>Website made with React, NextJS, and SCSS</p>
+
             </section>
         </footer>
     );

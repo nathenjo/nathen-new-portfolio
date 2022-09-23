@@ -1,0 +1,54 @@
+.nav-component {
+    position: absolute;
+    transition: 0.5s all ease;
+    z-index: 999;
+
+    .toggleDiv {
+        position: absolute;
+        transition: 0.3s all ease;
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+        background-color: $blue;
+        border-radius: 0 0 50% 0;
+        display: grid;
+        align-content: end;
+        justify-content: center;
+
+        i {
+            padding-bottom: 10px;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            background-color: $light-green;
+            i {
+                color: $white;
+            }
+        }
+    }
+
+    .link-wrapper {
+        transition: 0.5s all ease;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        gap: 20px;
+        width: 100px;
+
+        background-color: $blue;
+        padding: 10px;
+        border-radius: 10px;
+        a {
+            @include link-style();
+        }
+    }
+
+    .show-links {
+        transform: translate(100px, 100px) rotate(0deg);
+    }
+
+    .hide-links {
+        transform: translate(-200px, 100px) rotate(90deg);
+    }
+}

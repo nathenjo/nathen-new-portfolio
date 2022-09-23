@@ -1,0 +1,20 @@
+.skill-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto auto;
+    align-items: center;
+
+    color: $black;
+    @include card-style();
+    span {
+        grid-row: 1/2;
+        place-self: center;
+    }
+    h2 {
+        grid-row: 2/3;
+        text-align: center;
+    }
+    p {
+        grid-row: 3/4;
+    }
+}

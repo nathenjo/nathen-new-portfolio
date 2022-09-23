@@ -6,7 +6,7 @@ export default function SkillCard(props) {
     const { imageSrc, cardTitle, cardCaption } = props;
     
     return (
-        <div className='project-preview'>
+        <div className='skill-card'>
             <Image
                 src={imageSrc}
                 className='card-img'

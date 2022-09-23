@@ -4,3 +4,13 @@
     border-radius: 20px;
     padding: 10px;
 }
+
+@mixin link-style {
+    color: $white;
+    font-size: 1.3em;
+    transition: 0.3s all ease;
+    &:hover {
+        transform: translateX(5px);
+        text-decoration: underline;
+    }
+}

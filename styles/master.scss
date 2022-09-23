@@ -1,15 +1,12 @@
+// Font Styles Imports
 @import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
-$green: #0C4C2A;
-$light-green: #12733F;
-$black: #262626;
-$gray: #8C8C8C;
-$white: #E6E6E6;
-$blue: #00A4B3;
+// Bootstrap Icon import
+@import "bootstrap-icons/font/bootstrap-icons.scss";
 
-$title-text: 'Gulzar', serif;
-
+// Variables && Mixins import
+@import './variables.scss';
 @import './mixins.scss';
 
 * {
@@ -19,10 +16,15 @@ $title-text: 'Gulzar', serif;
 
 body {
     background-color: $black;
-    font-family: 'Gowun Dodum', sans-serif;
+    font-family: $sans-text;
 }
 
-@import "bootstrap-icons/font/bootstrap-icons.scss";
-
+// Page Styles
 @import './index.scss';
-@import './components.scss';
+
+// Component Styles
+@import './components/nav.scss';
+@import './components/footer.scss';
+@import './components/skill-card.scss';
+@import './components/profile-card.scss';
+@import './components/social-link.scss';

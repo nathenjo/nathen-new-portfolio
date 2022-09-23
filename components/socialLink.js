@@ -4,7 +4,7 @@ import TitleCase from './capitalize';
 
 export default function SocialLink(props) {
 
-    const { propClass, icon, link } = props;
+    const { icon, link } = props;
 
     const [title, setTitle] = useState('');
 
@@ -15,7 +15,7 @@ export default function SocialLink(props) {
     }, [])
 
     return (
-        <a className={`social-link-component ${propClass}`} href={link} target='_blank'>
+        <a className={`social-link-component ${title.toLowerCase()}`} href={link} target='_blank'>
             <i className={`icon ${icon}`}></i>
             <span>{title}</span>
         </a>
