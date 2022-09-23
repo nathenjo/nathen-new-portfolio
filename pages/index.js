@@ -39,31 +39,37 @@ export default function Index() {
                     imageSrc='/python-logo.png'
                     cardTitle='Python'
                     cardCaption='Professionally certified in Python development through Bottega University, Full Stack Certificate'
+                    projects={['Chat App Capstone API', 'Automation Scripts']}
                 />
                 <SkillCard
                     imageSrc='/javascript-logo.svg'
                     cardTitle='Javascript'
                     cardCaption='Professionally certified in Javascript development through Bottega University, Full Stack Certificate, including modern ES6 syntax and JQuery'
+                    projects={['Personal Portfolio', 'devCamp eCommerce Site', 'Chat App Capstone']}
                 />
                 <SkillCard
                     imageSrc='/react-logo.png'
                     cardTitle='React'
                     cardCaption='Professionally certified in React development through Bottega University, Full Stack Certificate'
+                    projects={['Personal Portfolio', 'devCamp eCommerce Site', 'Chat App Capstone']}
                 />
                 <SkillCard
                     imageSrc='/git-icon.png'
                     cardTitle='Git'
                     cardCaption='Professionally certified in Git through Bottega University, Full Stack Certificate and regulary use and improve through personal projects'
+                    projects={[]}
                 />
                 <SkillCard
                     imageSrc='/aspnet-logo.png'
                     cardTitle='Virtual Basic/ASP.Net'
                     cardCaption='Professional experience developing ASP.net web applications with Florence Once Schools, Applications Developer'
+                    projects={['Supplemental Pay Application', 'Financial Reporting Application']}
                 />
                 <SkillCard
                     imageSrc='/mongodb-logo.png'
                     cardTitle='MongoDB'
                     cardCaption='Professionally certified in MongoDB through Bottega University, Full Stack Certificate and regulary use and improve through personal projects'
+                    projects={[]}
                 />
             </section>
             <section className='footer-section'>

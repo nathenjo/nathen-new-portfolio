@@ -9,6 +9,7 @@
     color: $white;
     font-size: 1.3em;
     transition: 0.3s all ease;
+    text-decoration: none;
     &:hover {
         transform: translateX(5px);
         text-decoration: underline;

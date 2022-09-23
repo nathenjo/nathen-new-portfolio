@@ -1,20 +1,54 @@
-.skill-card {
+@mixin card-structure {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 150px auto auto;
     align-items: center;
+}
 
+.skill-card {
+    display: grid;
+    grid-template-columns: 1/-1;
+    grid-template-rows: 1/-1;
+    transition: 0.6s all ease;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
     color: $black;
-    @include card-style();
-    span {
-        grid-row: 1/2;
-        place-self: center;
+    .card-front, .card-back {
+        backface-visibility: hidden;
+        transition: 0.6s all ease;
     }
-    h2 {
-        grid-row: 2/3;
-        text-align: center;
+    & > * {
+        grid-row: 1/-1;
+        grid-column: 1/-1;
     }
-    p {
-        grid-row: 3/4;
+    .card-front {
+        height: 300px;
+        width: 300px;
+        @include card-style();
+        @include card-structure();
+        span {
+            grid-row: 1/2;
+            place-self: center;
+        }
+        h2 {
+            grid-row: 2/3;
+            text-align: center;
+        }
+        p {
+            grid-row: 3/4;
+        }
+    }
+    
+    .card-back {
+        height: 300px;
+        width: 300px;
+        transform: rotateY(-180deg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include card-style();
+        background-color: $blue;
+        color: $white;
     }
 }
+

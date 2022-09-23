@@ -9,14 +9,17 @@ export default function Footer(props) {
     return (
         <footer className={`footer-component ${propClass}`}>
             <section className='socials'>
-                <SocialLink
-                    icon='bi-linkedin'
-                    link='https://www.linkedin.com/in/nathen-johnson-67155920b/'
-                />
-                <SocialLink
-                    icon='bi-github'
-                    link='https://github.com/nathenjo'
-                />
+                <h3>Socials</h3>
+                <div class='social-links'>
+                    <SocialLink
+                        icon='bi-linkedin'
+                        link='https://www.linkedin.com/in/nathen-johnson-67155920b/'
+                    />
+                    <SocialLink
+                        icon='bi-github'
+                        link='https://github.com/nathenjo'
+                    />
+                </div>
             </section>
 
             <section className='sitemap'>
