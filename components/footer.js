@@ -39,7 +39,6 @@ export default function Footer(props) {
                 </div>
                 <p>Professionally certified Full Stack Developer through Bottega University. Currently working for Florence One School District as a Full Stack Developer, formally called an Applications Developer.</p>
                 <p>Website made with React, NextJS, and SCSS</p>
-
             </section>
         </footer>
     );
