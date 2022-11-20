@@ -2,10 +2,22 @@ import React, { useEffect, useState } from 'react';
 
 export default function NavComponent(props) {
 
-    const { propClass, navLinks, setPageLoc } = props;
+    const { propClass, navLinks, setPageLoc, windowWidth } = props;
 
     const [showLink, setShowLinks] = useState(false);
     const [iconType, setIconType] = useState({});
+    const [navClass, setNavClass] = useState('desktop-nav');
+    const [mobileView, setMobileView] = useState(false);
+
+    useEffect(() => {
+        if (windowWidth > 850) {
+            setNavClass('desktop-nav');
+            setMobileView(false);
+        } else {
+            setNavClass('nav-component');
+            setMobileView(true);
+        }
+    }, [])
 
     useEffect(() => {
         if (showLink) {
@@ -35,7 +47,7 @@ export default function NavComponent(props) {
     }
 
     return(
-        <nav className={`nav-component ${propClass}`}>
+        <nav className={`${navClass} ${propClass}`}>
             <div onClick={toggleLinkState} className='toggleDiv'>
                 <i onClick={toggleLinkState} className={`icon ${iconType}`}></i>
             </div>

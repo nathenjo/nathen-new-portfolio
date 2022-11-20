@@ -26,6 +26,13 @@
         text-transform: uppercase;
     }
 
+    .skills-subheading {
+        text-align: center;
+        color: $white;
+        font-family: $title-text;
+        font-weight: 300;
+    }
+
     .content {
         display: grid;
         grid-template-columns: repeat(auto-fit, 300px);

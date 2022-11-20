@@ -9,6 +9,9 @@ import Title from "../components/title";
 
 export default function Index() {
 
+    const [pageLoc, setPageLoc] = useState('home');
+    const [skillsSubheading, setSkillsSubheading] = useState('Click');
+
     const navLinks = ['Home', 'About', 'Projects', 'Contact'];
     const [windowWidth, setWindowWidth] = useState();
 
@@ -19,14 +22,18 @@ export default function Index() {
     useEffect(() => {
         window.addEventListener('resize', function() {
             setWindowWidth(window.innerWidth);
-        })
+        });
+        if (windowWidth < 850) {
+            setSkillsSubheading('Tap');
+        } else {
+            setSkillsSubheading('Click');
+        };
     }, [windowWidth])
 
-    const [pageLoc, setPageLoc] = useState('home');
 
     return(
         <div className='index'>
-            <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} />
+            <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} windowWidth={windowWidth} />
 
             <section className='profile-info'>
                 {windowWidth > 850 && <Placeholder propClass='pi-placeholder' />}
@@ -34,6 +41,7 @@ export default function Index() {
                 <ProfileCard propClass='index-pc' />
             </section>
             <Title title='Skills' propClass='skills-heading' />
+            <div className='skills-subheading'>({skillsSubheading} on card to see details)</div>
             <section className='content'>
                 <SkillCard
                     imageSrc='/python-logo.png'
