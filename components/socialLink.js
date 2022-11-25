@@ -10,7 +10,6 @@ export default function SocialLink(props) {
 
     useEffect(() => {
         let type = icon.split('-')[1];
-        console.log(type);
         setTitle((TitleCase(type)));
     }, [])
 

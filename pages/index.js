@@ -65,13 +65,13 @@ export default function Index() {
                     imageSrc='/git-icon.png'
                     cardTitle='Git'
                     cardCaption='Professionally certified in Git through Bottega University, Full Stack Certificate and regulary use and improve through personal projects'
-                    projects={[]}
+                    projects={['See GitHub link in footer']}
                 />
                 <SkillCard
                     imageSrc='/aspnet-logo.png'
                     cardTitle='Virtual Basic/ASP.Net'
                     cardCaption='Professional experience developing ASP.net web applications with Florence Once Schools, Applications Developer'
-                    projects={['Supplemental Pay Application', 'Financial Reporting Application']}
+                    projects={['Supplemental Pay Application', 'Financial Reporting Application', 'Transportation Call Center Application']}
                 />
                 <SkillCard
                     imageSrc='/mongodb-logo.png'

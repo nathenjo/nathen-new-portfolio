@@ -10,7 +10,7 @@ export default function Footer(props) {
         <footer className={`footer-component ${propClass}`}>
             <section className='socials'>
                 <h3>Socials</h3>
-                <div class='social-links'>
+                <div className='social-links'>
                     <SocialLink
                         icon='bi-linkedin'
                         link='https://www.linkedin.com/in/nathen-johnson-67155920b/'
@@ -24,16 +24,17 @@ export default function Footer(props) {
 
             <section className='sitemap'>
                 {links.map((link, index) => {
-                    return (<a key={index} onClick={() => setPageLoc({link}.toLowerCase())} href={link.toLowerCase()}>{link}</a>)
+                    return (<a key={index} onClick={() => setPageLoc({link}.toLowerCase)} href={link.toLowerCase()}>{link}</a>)
                 })}
             </section>
 
             <section className='mini-bio'>
-                <div class='image-header'>
+                <div className='image-header'>
                     <Image
                         src='/nate-headshot.jpg'
                         width='100'
                         height='100'
+                        className='footer-profile-pic'
                     />
                     <h3>Portfolio for Nathen Johnson</h3>
                 </div>

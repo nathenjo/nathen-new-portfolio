@@ -1,9 +1,7 @@
 .social-link-component {
     display: flex;
     gap: 15px;
-    border-bottom: 1px solid transparent;
     &:hover {
-        border-bottom: 1px solid $black;
         i, span {
             color: $black;
         }

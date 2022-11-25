@@ -53,3 +53,23 @@
         transform: translate(-200px, 100px) rotate(90deg);
     }
 }
+
+.desktop-nav {
+    width: 60%;
+    background-color: $blue;
+    color: $white;
+    height: 50px;
+    border-radius: 0px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+
+    section {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        a {
+            @include link-style();
+        }
+    }
+}

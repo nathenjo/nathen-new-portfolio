@@ -8,16 +8,19 @@ export default function NavComponent(props) {
     const [iconType, setIconType] = useState({});
     const [navClass, setNavClass] = useState('desktop-nav');
     const [mobileView, setMobileView] = useState(false);
+    const [mobileClass, setMobileClass] = useState('');
 
     useEffect(() => {
         if (windowWidth > 850) {
             setNavClass('desktop-nav');
             setMobileView(false);
+            setMobileClass('');
         } else {
             setNavClass('nav-component');
             setMobileView(true);
+            setMobileClass(`${setLinkClass()} link-wrapper`)
         }
-    }, [])
+    }, [windowWidth])
 
     useEffect(() => {
         if (showLink) {
@@ -48,12 +51,12 @@ export default function NavComponent(props) {
 
     return(
         <nav className={`${navClass} ${propClass}`}>
-            <div onClick={toggleLinkState} className='toggleDiv'>
+            {mobileView && <div onClick={toggleLinkState} className='toggleDiv'>
                 <i onClick={toggleLinkState} className={`icon ${iconType}`}></i>
-            </div>
-            <section className={`${setLinkClass()} link-wrapper`}>
+            </div>}
+            <section className={mobileClass}>
             {navLinks.map((item, index) => {
-                    return (<a key={index} onClick={() => setPageLoc({item}.toLowerCase())} href={item.toLowerCase()}>{item}</a>)
+                    return (<a key={index} onClick={() => setPageLoc({item}.toLowerCase)} href={item.toLowerCase()}>{item}</a>)
                 })}
             </section>
         </nav>

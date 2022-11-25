@@ -25,7 +25,7 @@ export default function SkillCard(props) {
 
     return (
         <div onClick={flipCard} className='skill-card'>
-            <div style={{'transform': `rotateY(${frontRotate})`}} class='card-front'>
+            <div style={{'transform': `rotateY(${frontRotate})`}} className='card-front'>
                 <Image
                     src={imageSrc}
                     className='card-img'
@@ -35,7 +35,7 @@ export default function SkillCard(props) {
                 <h2>{cardTitle}</h2>
                 <p>{cardCaption}</p>
             </div>
-            <div style={{'transform': `rotateY(${backRotate})`}} class='card-back'>
+            <div style={{'transform': `rotateY(${backRotate})`}} className='card-back'>
                 <h2>Projects</h2>
                 <ul>
                     {projects.length > 0 && projects.map((item, index) => {

@@ -18,6 +18,7 @@
             align-items: flex-start;
             height: 100%;
             a {
+                transition: 0.3s all ease;
                 text-decoration: none;
                 color: $white
             }
@@ -45,6 +46,10 @@
             h3 {
                 place-self: center;
             }
+
+            .footer-profile-pic {
+                border-radius: 10px;
+            }
         }
         font-size: 0.8em;
         display: flex;
@@ -58,13 +63,20 @@
     .footer-component {
         grid-template-columns: 1fr;
 
+        section {
+            border-bottom: 1px solid $white;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
         .socials {
             display: flex;
             flex-direction: column;
+            text-align: center;
             .social-links {
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-around;
             }
         }
     }
