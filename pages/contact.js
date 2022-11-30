@@ -1,11 +1,12 @@
 import React from 'react';
 
-export default function Contact(props) {
+import NavComponent from '../components/nav';
 
-    const {} = props;
+export default function Contact({navLinks, windowWidth}) {
 
     return (
         <div>
+            <NavComponent propClass={'contact-nav'} navLinks={navLinks} windowWidth={windowWidth} />
             Contact Page
         </div>
     );

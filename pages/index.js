@@ -7,29 +7,18 @@ import ProfileCard from "../components/profileCard";
 import SkillCard from "../components/skillCard";
 import Title from "../components/title";
 
-export default function Index() {
+export default function Index({ navLinks, windowWidth }) {
 
     const [pageLoc, setPageLoc] = useState('home');
     const [skillsSubheading, setSkillsSubheading] = useState('Click');
 
-    const navLinks = ['Home', 'About', 'Projects', 'Contact'];
-    const [windowWidth, setWindowWidth] = useState();
-
     useEffect(() => {
-        setWindowWidth(window.innerWidth);
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('resize', function() {
-            setWindowWidth(window.innerWidth);
-        });
         if (windowWidth < 850) {
             setSkillsSubheading('Tap');
         } else {
             setSkillsSubheading('Click');
         };
     }, [windowWidth])
-
 
     return(
         <div className='index'>

@@ -6,10 +6,11 @@
 }
 
 @mixin link-style {
-    color: $white;
+    color: $black;
     font-size: 1.3em;
     transition: 0.3s all ease;
     text-decoration: none;
+    font-weight: 600;
     &:hover {
         transform: translateX(5px);
         text-decoration: underline;

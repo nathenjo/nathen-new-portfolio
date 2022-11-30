@@ -1,11 +1,12 @@
 import React from 'react';
 
-export default function Projects(props) {
+import NavComponent from '../components/nav';
 
-    const {} = props;
+export default function Projects({navLinks, windowWidth}) {
 
     return (
         <div>
+            <NavComponent propClass={'projects-nav'} navLinks={navLinks} windowWidth={windowWidth} />
             Projects
         </div>
     );

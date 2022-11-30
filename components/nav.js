@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function NavComponent(props) {
 
-    const { propClass, navLinks, setPageLoc, windowWidth } = props;
+    const { propClass, navLinks, windowWidth } = props;
 
     const [showLink, setShowLinks] = useState(false);
     const [iconType, setIconType] = useState({});
@@ -35,6 +35,7 @@ export default function NavComponent(props) {
                 toggleLinkState()
             }
         })
+        setMobileClass(`${setLinkClass()} link-wrapper`)
     }, [showLink])
 
     const setLinkClass = () => {
@@ -51,12 +52,12 @@ export default function NavComponent(props) {
 
     return(
         <nav className={`${navClass} ${propClass}`}>
-            {mobileView && <div onClick={toggleLinkState} className='toggleDiv'>
+            {mobileView && <div onClick={() => toggleLinkState} className='toggleDiv'>
                 <i onClick={toggleLinkState} className={`icon ${iconType}`}></i>
             </div>}
             <section className={mobileClass}>
             {navLinks.map((item, index) => {
-                    return (<a key={index} onClick={() => setPageLoc({item}.toLowerCase)} href={item.toLowerCase()}>{item}</a>)
+                    return (<a key={index} href={item.toLowerCase().replace('home', '/')}>{item}</a>)
                 })}
             </section>
         </nav>
