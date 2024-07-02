@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import SocialLink from './socialLink';
+import Placeholder from './placeholder';
 
 export default function Footer(props) {
 
@@ -22,11 +23,7 @@ export default function Footer(props) {
                 </div>
             </section>
 
-            <section className='sitemap'>
-                {links.map((link, index) => {
-                    return (<a key={index} onClick={() => setPageLoc({link}.toLowerCase)} href={link.toLowerCase()}>{link}</a>)
-                })}
-            </section>
+            <Placeholder />
 
             <section className='mini-bio'>
                 <div className='image-header'>

@@ -22,7 +22,7 @@ export default function Index({ navLinks, windowWidth }) {
 
     return(
         <div className='index'>
-            <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} windowWidth={windowWidth} />
+            {/* <NavComponent navLinks={navLinks} propClass='index-nav' setPageLoc={setPageLoc} windowWidth={windowWidth} /> */}
 
             <section className='profile-info'>
                 {windowWidth > 850 && <Placeholder propClass='pi-placeholder' />}
@@ -36,31 +36,31 @@ export default function Index({ navLinks, windowWidth }) {
                     imageSrc='/python-logo.png'
                     cardTitle='Python'
                     cardCaption='Professionally certified in Python development through Bottega University, Full Stack Certificate'
-                    projects={['Chat App Capstone API', 'Automation Scripts']}
+                    projects={[{'text':'Chat App Capstone API','link':''}, {'text':'Automation Scripts','link':''}]}
                 />
                 <SkillCard
                     imageSrc='/javascript-logo.svg'
                     cardTitle='Javascript'
                     cardCaption='Professionally certified in Javascript development through Bottega University, Full Stack Certificate, including modern ES6 syntax and JQuery'
-                    projects={['Personal Portfolio', 'devCamp eCommerce Site', 'Chat App Capstone']}
+                    projects={[{'text':'Personal Portfolio','link':''}, {'text':'devCamp eCommerce Site','link':''}, {'text':'Chat App Capstone','link':''}]}
                 />
                 <SkillCard
                     imageSrc='/react-logo.png'
                     cardTitle='React'
                     cardCaption='Professionally certified in React development through Bottega University, Full Stack Certificate'
-                    projects={['Personal Portfolio', 'devCamp eCommerce Site', 'Chat App Capstone']}
+                    projects={[{'text':'Personal Portfolio','link':''}, {'text':'devCamp eCommerce Site','link':''}, {'text':'Chat App Capstone','link':''}]}
                 />
                 <SkillCard
                     imageSrc='/git-icon.png'
                     cardTitle='Git'
                     cardCaption='Professionally certified in Git through Bottega University, Full Stack Certificate and regulary use and improve through personal projects'
-                    projects={['See GitHub link in footer']}
+                    projects={[{'text':'See GitHub link in footer','link':''}]}
                 />
                 <SkillCard
                     imageSrc='/aspnet-logo.png'
                     cardTitle='Virtual Basic/ASP.Net'
-                    cardCaption='Professional experience developing ASP.net web applications with Florence Once Schools, Applications Developer'
-                    projects={['Supplemental Pay Application', 'Financial Reporting Application', 'Transportation Call Center Application']}
+                    cardCaption='Professional experience developing ASP.Net web applications with Florence Once Schools, Applications Developer'
+                    projects={[{'text':'The Shady Rest','link':'https://theshadyrest.com'},{'text':'Supplemental Pay Application','link':''}, {'text':'Financial Reporting Application','link':''}, {'text':'Transportation Call Center Application','link':''}]}
                 />
                 <SkillCard
                     imageSrc='/mongodb-logo.png'

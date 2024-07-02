@@ -37,11 +37,15 @@ export default function SkillCard(props) {
             </div>
             <div style={{'transform': `rotateY(${backRotate})`}} className='card-back'>
                 <h2>Projects</h2>
-                <ul>
+                <ol>
                     {projects.length > 0 && projects.map((item, index) => {
-                        return <li key={index}>{item}</li>
+                        if (item.link != '') {
+                            return <li key={index}><a target='_blank' href={item.link}>{item.text}</a></li>
+                        } else {
+                            return <li key={index}>{item.text}</li>
+                        }
                     })}
-                </ul>
+                </ol>
             </div>
         </div>
     )
